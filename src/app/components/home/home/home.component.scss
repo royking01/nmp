@@ -9,12 +9,12 @@ ion-content {
     position: fixed;
     bottom: 0;
     width: 100%;
-    ion-tab-bar {
-      ion-tab-button {
-        ion-icon {
-        }
-        ion-label {
-        }
+    ion-button {
+      @include m.flexCenter();
+      --background: transperent;
+      ion-icon {
+      }
+      ion-label {
       }
     }
   }

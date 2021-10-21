@@ -4,13 +4,13 @@
     <span class="__slides">...</span>
   </h1>
   <div class="ion-tabs">
-    <ion-tab-button
+    <ion-button
       *ngFor="let tab of tabs"
-      (click)="handleTabRoute(tab.label)"
+      (click)="handleTabRoute(tab.component)"
       class="__ion-tab"
     >
       <ion-icon name="{{ tab.icon }}"></ion-icon>
       <ion-label>{{ tab.label }}</ion-label>
-    </ion-tab-button>
+    </ion-button>
   </div>
 </ion-content>
