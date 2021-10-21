@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalServiceService } from 'src/app/services/modal-service/modal-service.service';
 
 @Component({
   selector: 'app-account-page',
@@ -7,10 +7,10 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./account-page.component.scss'],
 })
 export class AccountPageComponent implements OnInit {
-  constructor(public modalController: ModalController) {}
+  constructor(private modalService: ModalServiceService) {}
 
   ngOnInit() {}
   closeHome() {
-    this.modalController.dismiss();
+    this.modalService.closeModal();
   }
 }
