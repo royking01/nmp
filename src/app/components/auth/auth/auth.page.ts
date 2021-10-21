@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { LoginAuth } from 'src/app/Interfaces/Auth/auth';
+import { TabsPage } from 'src/app/tabs/tabs.page';
 import { HomeComponent } from '../../home/home/home.component';
+import { HomepageComponent } from '../../home/homepage/homepage/homepage.component';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.page.html',
@@ -17,14 +20,19 @@ export class AuthPage implements OnInit {
     return await modal.present();
   }
   constructor(public modalController: ModalController) {
-    const logged = localStorage.getItem('isLoggedIn');
+    // const logged = localStorage.getItem('isLoggedIn');
     // logged ? this.login() : '';
   }
 
   ngOnInit() {}
   login() {
-    const logged = localStorage.getItem('isLoggedIn');
-    logged ? localStorage.setItem('isLoggedIn', 'TRUE') : '';
+    const userCredentials: LoginAuth = {
+      email: this.email,
+      password: this.password,
+    };
+    console.log(userCredentials);
+    // const logged = localStorage.getItem('isLoggedIn');
+    // logged ? localStorage.setItem('isLoggedIn', 'TRUE') : '';
     this.presentHome();
   }
 }

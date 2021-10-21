@@ -1,31 +1,23 @@
+@use "../../../../theme/variables.scss" as m;
+
 ion-content {
   .contents {
-    display: flex;
+    @include m.flexCenter();
     width: 100%;
-    align-items: center;
     height: 100%;
-    justify-content: center;
-    .center {
-      display: flex;
-      flex-direction: column;
+    & .center {
+      @include m.flexCenter();
       justify-content: space-between;
-      align-items: center;
       height: 230px;
-      .inputs {
-        // border: 1px solid;
-      }
       ion-list {
-        // border: 1px solid;
-        display: flex;
-        align-items: center;
+        @include m.flexCenter();
+        flex-direction: row;
         padding: 10px 20px;
         justify-content: space-between;
         width: 100%;
       }
       ion-button {
         width: 100%;
-
-        // margin-top: 25px;
       }
     }
   }

@@ -1,20 +1,22 @@
 <ion-content>
   <div class="contents">
     <div class="center">
-      <ion-list class="inputs" color="primary">
-        <ion-icon name="mail" color="primary-contrast"> </ion-icon>
+      <ion-list class="inputs">
+        <ion-icon name="mail" color="light"> </ion-icon>
         <ion-input
           placeholder="email"
           type="email"
           [(ngModel)]="email"
+          color="light"
         ></ion-input>
       </ion-list>
-      <ion-list class="inputs" color="primary">
-        <ion-icon name="lock-closed"></ion-icon>
+      <ion-list class="inputs">
+        <ion-icon name="lock-closed" color="light"></ion-icon>
         <ion-input
           placeholder="Password"
           type="password"
           [(ngModel)]="password"
+          color="light"
         ></ion-input>
       </ion-list>
       <ion-button class="btn-primary" color="danger" (click)="login()">
