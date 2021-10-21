@@ -3,27 +3,14 @@
     Welcome To Home
     <span class="__slides">...</span>
   </h1>
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button color="primary" (click)="handleTabRoute('Home')">
-        <ion-icon name="home-sharp"></ion-icon>
-        <ion-label>Home</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button (click)="handleTabRoute('Explore')">
-        <ion-icon name="compass-outline"></ion-icon>
-        <ion-label>Explore</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button (click)="handleTabRoute('Favorite')">
-        <ion-icon name="heart-dislike-circle-outline"></ion-icon>
-        <ion-label>Favorite</ion-label>
-      </ion-tab-button>
-
-      <ion-tab-button (click)="handleTabRoute('Account')">
-        <ion-icon name="person-outline"></ion-icon>
-        <ion-label>Account</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  <div class="ion-tabs">
+    <ion-tab-button
+      *ngFor="let tab of tabs"
+      (click)="handleTabRoute(tab.label)"
+      class="__ion-tab"
+    >
+      <ion-icon name="{{ tab.icon }}"></ion-icon>
+      <ion-label>{{ tab.label }}</ion-label>
+    </ion-tab-button>
+  </div>
 </ion-content>

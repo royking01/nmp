@@ -3,11 +3,12 @@
 ion-content {
   h1 {
   }
-  ion-tabs {
+  & .ion-tabs {
+    @include m.flexCenter();
+    flex-direction: row;
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 4000;
     ion-tab-bar {
       ion-tab-button {
         ion-icon {

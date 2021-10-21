@@ -7,10 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { AuthPageRoutingModule } from './auth-routing.module';
 
 import { AuthPage } from './auth.page';
-import { HomepageComponent } from '../../home/homepage/homepage/homepage.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, AuthPageRoutingModule],
-  declarations: [AuthPage, HomepageComponent],
+  declarations: [AuthPage],
 })
 export class AuthPageModule {}

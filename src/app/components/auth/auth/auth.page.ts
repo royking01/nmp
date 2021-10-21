@@ -20,7 +20,7 @@ export class AuthPage implements OnInit {
     return await modal.present();
   }
   constructor(public modalController: ModalController) {
-    // const logged = localStorage.getItem('isLoggedIn');
+    const logged = localStorage.getItem('isLoggedIn');
     // logged ? this.login() : '';
   }
 
@@ -30,9 +30,8 @@ export class AuthPage implements OnInit {
       email: this.email,
       password: this.password,
     };
-    console.log(userCredentials);
-    // const logged = localStorage.getItem('isLoggedIn');
-    // logged ? localStorage.setItem('isLoggedIn', 'TRUE') : '';
+    const logged = localStorage.getItem('isLoggedIn');
+    logged ? localStorage.setItem('isLoggedIn', 'TRUE') : '';
     this.presentHome();
   }
 }

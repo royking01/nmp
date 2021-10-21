@@ -7,6 +7,8 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 import { AuthPageModule } from '../components/auth/auth/auth.module';
+import { HomeComponent } from '../components/home/home/home.component';
+import { HomepageComponent } from '../components/home/homepage/homepage/homepage.component';
 
 @NgModule({
   imports: [
