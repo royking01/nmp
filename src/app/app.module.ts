@@ -10,7 +10,7 @@ import { AuthPageModule } from './components/auth/auth/auth.module';
 import { HomepageComponent } from './components/home/homepage/homepage/homepage.component';
 
 @NgModule({
-  declarations: [AppComponent, HomepageComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
