@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-favorite-page',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorite-page.component.scss'],
 })
 export class FavoritePageComponent implements OnInit {
-
-  constructor() { }
+  constructor(public modalController: ModalController) {}
 
   ngOnInit() {}
-
+  closeHome() {
+    this.modalController.dismiss();
+  }
 }
