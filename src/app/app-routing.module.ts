@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './components/home/homepage/homepage/homepage.component';
 
 const routes: Routes = [
   {
@@ -14,10 +13,6 @@ const routes: Routes = [
       import('./components/auth/auth/auth.module').then(
         (m) => m.AuthPageModule
       ),
-  },
-  {
-    path: 'home-page',
-    component: HomepageComponent,
   },
 ];
 @NgModule({

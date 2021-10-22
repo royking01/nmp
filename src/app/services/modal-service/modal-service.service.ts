@@ -9,4 +9,11 @@ export class ModalServiceService {
   closeModal() {
     this.modalController.dismiss();
   }
+  async openModal(component_, props = '') {
+    const modal = await this.modalController.create({
+      component: component_,
+      cssClass: 'Home-css',
+    });
+    return await modal.present();
+  }
 }

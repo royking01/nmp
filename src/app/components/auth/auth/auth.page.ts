@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { LoginAuth } from 'src/app/Interfaces/Auth/auth';
+import { ModalServiceService } from 'src/app/services/modal-service/modal-service.service';
 import { TabsPage } from 'src/app/tabs/tabs.page';
-import { HomeComponent } from '../../home/home/home.component';
-import { HomepageComponent } from '../../home/homepage/homepage/homepage.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.page.html',
@@ -12,14 +13,12 @@ import { HomepageComponent } from '../../home/homepage/homepage/homepage.compone
 export class AuthPage implements OnInit {
   email: string = '';
   password: any = '';
-  async presentHome() {
-    const modal = await this.modalController.create({
-      component: HomeComponent,
-      cssClass: 'Home-css',
-    });
-    return await modal.present();
-  }
-  constructor(public modalController: ModalController) {
+
+  constructor(
+    public modalController: ModalController,
+    private modalService: ModalServiceService,
+    private router: Router
+  ) {
     const logged = localStorage.getItem('isLoggedIn');
     // logged ? this.login() : '';
   }
@@ -32,6 +31,12 @@ export class AuthPage implements OnInit {
     };
     const logged = localStorage.getItem('isLoggedIn');
     logged ? localStorage.setItem('isLoggedIn', 'TRUE') : '';
-    this.presentHome();
+    // this.presentHome();
+  }
+  next() {
+    this.router.navigate(['/tabs/tab1']);
+  }
+  register() {
+    this.modalService.openModal(RegisterPageComponent);
   }
 }
