@@ -3,22 +3,44 @@
 ion-content {
   .contents {
     @include m.flexCenter();
+    justify-content: space-between;
     width: 100%;
     height: 100%;
-    & .center {
+    padding: 5rem 20px;
+    & .content__top {
       @include m.flexCenter();
+      align-items: flex-start;
       justify-content: space-between;
-      height: 230px;
+      width: 100%;
+      & ion-label {
+        & h1 {
+          margin-bottom: 2px;
+          font-weight: 600;
+        }
+        & span {
+          font-size: 15px;
+        }
+      }
       ion-list {
         @include m.flexCenter();
         flex-direction: row;
         padding: 10px 20px;
         justify-content: space-between;
         width: 100%;
+        height: 50px;
+        margin: 20px 0;
       }
-      ion-button {
-        width: 100%;
+    }
+    & .content__bottom {
+      @include m.flexCenter();
+      & ion-button {
+        width: 80%;
+        --border-radius: 50px;
+        margin: 10px 0;
       }
+    }
+    & .content__bottom__sign_up {
+      font-weight: 600;
     }
   }
 }
