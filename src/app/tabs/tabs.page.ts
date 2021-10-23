@@ -8,7 +8,7 @@ import { tabInterface } from '../Interfaces/Auth/tab-interface';
 })
 export class TabsPage {
   tabs: tabInterface[] = [
-    { label: 'Home', icon: 'home-sharp', component: 'tab1' },
+    { label: 'Home', icon: 'home-outline', component: 'tab1' },
     {
       label: 'Favorite',
       icon: 'heart-dislike-circle-outline',
