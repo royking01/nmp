@@ -1,0 +1,15 @@
+@use "../../theme/variables.scss" as m;
+ion-content {
+  & .accounts__page__list {
+    margin: 5rem 0;
+    width: 100%;
+    padding: 20px;
+    &__item {
+      @include m.flexCenter();
+      flex-direction: row;
+      padding: 12px 0;
+      font-weight: 600;
+      border: 1px solid var(--ion-item-background);
+    }
+  }
+}

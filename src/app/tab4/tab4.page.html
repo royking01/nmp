@@ -1,13 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar lines="none">
     <ion-title> Tab 4 </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="accounts__page__list">
+    <ul>
+      <li
+        class="accounts__page__list__item"
+        *ngFor="let item of accountListItems"
+        (click)="accountListItemFunction(item.function)"
+      >
+        <ion-icon
+          name="{{item.icon}}"
+          color="dark"
+          class="accounts__page__list__item__icon"
+        >
+        </ion-icon>
+        {{item.label}}
+      </li>
+    </ul>
+  </div>
 </ion-content>

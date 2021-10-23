@@ -12,6 +12,7 @@
           type="email"
           [(ngModel)]="email"
           color="medium"
+          (ngModelChange)="handleInputValidation($event)"
         ></ion-input>
       </ion-list>
       <ion-list class="inputs">
@@ -21,12 +22,16 @@
           type="password"
           [(ngModel)]="password"
           color="medium"
+          (ngModelChange)="handleInputValidation($event)"
         ></ion-input>
       </ion-list>
+      <ion-label color="danger" class="error__message">
+        <span class="error__message__message"> {{error_message}}</span>
+      </ion-label>
     </div>
     <div class="content__bottom">
       <ion-button class="btn-primary" color="danger" (click)="next()">
-        Next</ion-button
+        Log In</ion-button
       >
       <p>
         Dont have an account?

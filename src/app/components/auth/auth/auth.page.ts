@@ -13,7 +13,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 export class AuthPage implements OnInit {
   email: string = '';
   password: any = '';
-
+  error_message: string = '';
   constructor(
     public modalController: ModalController,
     private modalService: ModalServiceService,
@@ -34,7 +34,12 @@ export class AuthPage implements OnInit {
     // this.presentHome();
   }
   next() {
+    if (!this.email || !this.password)
+      return (this.error_message = 'Invalid Credentials');
     this.router.navigate(['/tabs/tab1']);
+  }
+  handleInputValidation(e) {
+    e ? (this.error_message = '') : '';
   }
   register() {
     this.modalService.openModal(RegisterPageComponent);

@@ -1,3 +1,42 @@
-<p>
-  register-page works!
-</p>
+<ion-content>
+  <div class="contents">
+    <div class="content__top">
+      <ion-label>
+        <h1>Register</h1>
+        <span>Create an account</span>
+      </ion-label>
+      <ion-list class="inputs">
+        <ion-icon name="mail" color="medium"> </ion-icon>
+        <ion-input
+          placeholder="email"
+          type="email"
+          [(ngModel)]="email"
+          color="medium"
+          (ngModelChange)="handleInputValidation($event)"
+        ></ion-input>
+      </ion-list>
+      <ion-list class="inputs">
+        <ion-icon name="lock-closed" color="medium"> </ion-icon>
+        <ion-input
+          placeholder="Password"
+          type="password"
+          [(ngModel)]="password"
+          color="medium"
+          (ngModelChange)="handleInputValidation($event)"
+        ></ion-input>
+      </ion-list>
+      <ion-label color="danger" class="error__message">
+        <span class="error__message__message"> {{ error_message }}</span>
+      </ion-label>
+    </div>
+    <div class="content__bottom">
+      <ion-button class="btn-primary" color="danger" (click)="next()">
+        Next</ion-button
+      >
+      <p>
+        Already have an account?
+        <span class="content__bottom__sign_up" (click)="login()"> Log In </span>
+      </p>
+    </div>
+  </div>
+</ion-content>
