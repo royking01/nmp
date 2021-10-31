@@ -11,6 +11,7 @@
           placeholder="email"
           type="email"
           [(ngModel)]="email"
+          name="email"
           color="medium"
           (ngModelChange)="handleInputValidation($event)"
         ></ion-input>
@@ -20,6 +21,7 @@
         <ion-input
           placeholder="Password"
           type="password"
+          name="password"
           [(ngModel)]="password"
           color="medium"
           (ngModelChange)="handleInputValidation($event)"

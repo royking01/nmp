@@ -20,7 +20,7 @@ export class AuthPage implements OnInit {
     private router: Router
   ) {
     const logged = localStorage.getItem('isLoggedIn');
-    // logged ? this.login() : '';
+    logged ? this.login() : '';
   }
 
   ngOnInit() {}
@@ -32,6 +32,7 @@ export class AuthPage implements OnInit {
     const logged = localStorage.getItem('isLoggedIn');
     logged ? localStorage.setItem('isLoggedIn', 'TRUE') : '';
     // this.presentHome();
+    this.router.navigate(['/tabs/tab1']);
   }
   next() {
     if (!this.email || !this.password)

@@ -6,22 +6,24 @@
         <span>Sign in to your account</span>
       </ion-label>
       <ion-list class="inputs">
-        <ion-icon name="mail" color="medium"> </ion-icon>
+        <ion-icon name="mail" color="dark"> </ion-icon>
         <ion-input
           placeholder="email"
           type="email"
+          name="email"
           [(ngModel)]="email"
-          color="medium"
+          color="dark"
           (ngModelChange)="handleInputValidation($event)"
         ></ion-input>
       </ion-list>
       <ion-list class="inputs">
-        <ion-icon name="lock-closed" color="medium"> </ion-icon>
+        <ion-icon name="lock-closed" color="dark"> </ion-icon>
         <ion-input
           placeholder="Password"
           type="password"
+          name="password"
           [(ngModel)]="password"
-          color="medium"
+          color="dark"
           (ngModelChange)="handleInputValidation($event)"
         ></ion-input>
       </ion-list>
